@@ -1,6 +1,8 @@
 # Windows Security Descriptor Definition Language (SDDL)
 
-A simple SDDL parser for many Windows securable object types. You can use this tool to pretty-print security descriptors, access masks, SIDs, etc. and learn about the security model of the following:
+A simple SDDL parser for many Windows securable object types. Resolves generic access right requests based on the results
+of [another toy project](https://github.com/mtth-bfft/nt-object-types).
+You can use this tool to pretty-print security descriptors, access masks, SIDs, etc. and learn about the security model of the following:
 
 - Active Directory objects
 - DCOM
