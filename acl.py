@@ -19,7 +19,7 @@ class ACL:
             s += f'\n    Flags: '
             s += '\n           '.join(f'{abbr}: {props[0]} ({props[1]})' for abbr, props in self.flags.items())
         for ace in [] if self.aces is None else self.aces:
-            s += '\n    ACE: ' + '\n    '.join(ace.to_str(with_color).split('\n'))
+            s += '\n\n    ACE: ' + '\n    '.join(ace.to_str(with_color).split('\n'))
         return s
 
     @classmethod
