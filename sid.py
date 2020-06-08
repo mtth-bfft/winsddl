@@ -165,7 +165,7 @@ SID.WELL_KNOWN_SIDS = [
         'Group that includes all users who have logged on anonymously, maintained by the system'),
     SID('', 'S-1-5-9', 'Enterprise Domain Controllers', 'ED',
         'Group that contains all the domain controllers in an Active Directory forest, maintained by the system'),
-    SID('', 'S-1-5-10', 'Principal Self', 'PS'
+    SID('', 'S-1-5-10', 'Principal Self', 'PS',
         "Placeholder in an inheritable access control entry, replaced when inherited by a User or Group" +
         "with the child object's SID"),
     SID('', 'S-1-5-11', 'Authenticated Users', 'AU'),
