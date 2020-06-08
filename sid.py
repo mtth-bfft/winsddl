@@ -39,15 +39,15 @@ class SID:
         raw = raw.strip()
         upper = raw.upper()
         for wellknown in cls.WELL_KNOWN_SIDS:
-            if '<domain-sid>' in wellknown.raw:
-                prefix, suffix = wellknown.raw.split('<domain-sid>')
-            elif '<root-domain-sid>' in wellknown.raw:
-                prefix, suffix = wellknown.raw.split('<root-domain-sid>')
+            if '<domain-sid>' in wellknown.sid:
+                prefix, suffix = wellknown.sid.split('<domain-sid>')
+            elif '<root-domain-sid>' in wellknown.sid:
+                prefix, suffix = wellknown.sid.split('<root-domain-sid>')
             else:
                 prefix, suffix = '', wellknown.sid
             # Does the input match this well known SID's SID
             if upper.startswith(prefix) and upper.endswith(suffix):
-                return cls(upper, wellknown.sid, wellknown.principal, wellknown.abbr, wellknown.desc)
+                return cls(upper, upper, wellknown.principal, wellknown.abbr, wellknown.desc)
             # Does the input match this well known SID's SDDL abbreviation
             if upper == wellknown.abbr:
                 return cls(upper, wellknown.sid, wellknown.principal, wellknown.abbr, wellknown.desc)
